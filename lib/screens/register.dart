@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:login_page/services/auth.dart';
-import 'package:login_page/screens/subDivider.dart';
 
 class RegisterClass extends StatefulWidget {
 
@@ -25,6 +23,7 @@ class _RegisterClassState extends State<RegisterClass> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Sign In Page'),
+          backgroundColor: Colors.amber[100],
           actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.keyboard), 
@@ -54,7 +53,7 @@ class _RegisterClassState extends State<RegisterClass> {
                 ),
                 SizedBox(height:20),
                 RaisedButton(
-                  color: Colors.blueGrey[40],
+                  color: Colors.black54,
                   child: Text('Sign In', style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {

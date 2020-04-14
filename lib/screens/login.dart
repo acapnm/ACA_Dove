@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/screens/register.dart';
 import 'package:login_page/services/auth.dart';
-import 'package:login_page/screens/subDivider.dart';
 
 class login extends StatelessWidget {
   // This widget is the root of your application

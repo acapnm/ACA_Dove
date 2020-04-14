@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "739471054584",
+    "firebase_url": "https://aca-dove.firebaseio.com",
+    "project_id": "aca-dove",
+    "storage_bucket": "aca-dove.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739471054584:android:aff263366657e0720dcd0d",
+        "android_client_info": {
+          "package_name": "com.acapnm.dove"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739471054584-gam7bu1qslkt2ls9vn7ug47idsbgidkd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_TAQPXSvSIHZi4FfqWYxrj9-_7awvhYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739471054584-gam7bu1qslkt2ls9vn7ug47idsbgidkd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,69 +1,23 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:login_page/models/userId.dart';
+import 'package:login_page/screens/divider.dart';
+import 'package:login_page/services/auth.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  // This widget is the root of your application
+  //SreamProvider is a provider widget which helps us in making the stream available
+  //in all the modules/widgets used after Material app
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-        title: Text('Login Page'),
+    return StreamProvider<userClass>.value(
+      value: authService().uid,
+      child: MaterialApp(
+        home: divider(),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-      Row (
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            width: 250,  
-            //padding: EdgeInsets.all(100),   
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                  labelText: 'Enter Username Here',
-                  hintText: 'Enter Username Here',
-              ),
-              autofocus: false,
-            ),),
-        ],),
-        //Spacer(flex: 1 ),
-        SizedBox(height: 7),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-        Container( 
-            //alignment: Alignment(1,1),
-            width: 250,       
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                  labelText: 'Enter Password Here',
-                  hintText: 'Enter Password Here',
-              ),
-              autofocus: false,
-            ),
-          ),
-      ],),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            child: RaisedButton(
-              child: Text('Submit'),
-              onPressed: _loginSubmit,
-            ),
-          ),
-        ],
-      ),
-        ],),
-        ),
     );
   }
-}
-
-_loginSubmit(){
-
 }

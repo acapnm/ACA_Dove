@@ -17,7 +17,7 @@ class _RegisterClassState extends State<RegisterClass> {
   final authService _auth = authService();
   final _registerFormKey = GlobalKey<FormState>();
 
-  String phone = '';
+  int phone = 0;
   String pwd = '';
   String name = '';
   String email = '';
@@ -69,7 +69,7 @@ class _RegisterClassState extends State<RegisterClass> {
                     validator: (val_userPhone) => val_userPhone.length < 10 ? 'Enter 10 digit number' : null,
                     decoration: formTextDecoration.copyWith(hintText: 'Enter Phone number'),
                     onChanged: (val_userPhone) {
-                      setState(() => phone = val_userPhone);               
+                      setState(() => phone = int.parse(val_userPhone));               
                     },
                   ),
                   ),
@@ -127,7 +127,7 @@ class _RegisterClassState extends State<RegisterClass> {
                     onPressed: () async {
                       setState(() => loading = true);
                         if (_registerFormKey.currentState.validate()){
-                          dynamic regResult = await _auth.createUserID(email, pwd);
+                          dynamic regResult = await _auth.createUserID(name, phone, email, address, pwd);
                           if (regResult == null){
                             setState(() {
                               error = 'Please provide valid email';
@@ -147,7 +147,7 @@ class _RegisterClassState extends State<RegisterClass> {
           ),
         ),
       ),
-      ),
+        ),
       
     );
   }

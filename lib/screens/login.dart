@@ -41,7 +41,7 @@ class _loginState extends State<login> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/BG_Template1.jpg"),
+            image: AssetImage("assets/Cross.jpg"),
             fit: BoxFit.fill,
           )
         ),
@@ -49,6 +49,30 @@ class _loginState extends State<login> {
           key: _loginFormKey,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+          Row (
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              //padding: EdgeInsets.all(100),   
+              child: Text('APOSTOLIC CHRISTIAN ASSEMBLY',
+              style: TextStyle(fontSize: 20),
+              ),
+              ),
+          ],),
+          //Spacer(flex: 1 ),
+          SizedBox(height: 7),
+          Row (
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              //padding: EdgeInsets.all(100),   
+              child: Text('PERIYAR NAGAR MINISTRIES',
+              style: TextStyle(fontSize: 15),
+              ),
+              ),
+          ],),
+          //Spacer(flex: 1 ),
+          SizedBox(height: 7),
         Row (
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -59,13 +83,13 @@ class _loginState extends State<login> {
                 //validator: (val_userEmail) => val_userEmail.isEmpty ? 'Enter your Email address' : null,
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: BorderSide(color: Colors.purple),
                   ),
                   border: OutlineInputBorder(),
                     labelText: 'Enter Email Here',
-                    labelStyle: TextStyle(color: Colors.white),
+                    labelStyle: TextStyle(color: Colors.black),
                     hintText: 'Enter Email Here',
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.black),
                 ),
                 autofocus: false,
                 onChanged: (val_userEmail) {
@@ -84,13 +108,13 @@ class _loginState extends State<login> {
               child: TextField(
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: BorderSide(color: Colors.purple),
                   ),
                   border: OutlineInputBorder(),
                     labelText: 'Enter Password Here',
-                    labelStyle: TextStyle(color: Colors.white),
+                    labelStyle: TextStyle(color: Colors.black),
                     hintText: 'Enter Password Here',
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.black),
                 ),
                 autofocus: false,
                 obscureText: true,

@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/services/auth.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
-class home  extends StatefulWidget {
+class home extends StatefulWidget {
   @override
   _homeState createState() => _homeState();
 }
 
-class _homeState extends State< home > {
-
-  final authService _authInst = authService();
-
+class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
+    Widget image_slider = Container(
+      height: 200,
+      child: Carousel(
+        boxFit: BoxFit.fill,
+        images: [
+          ExactAssetImage("assets/Verse1.jpg"), 
+          ExactAssetImage("assets/Verse2.jpg"),
+          ExactAssetImage("assets/Verse3.jpg"), 
+        ],
+      ),
+    );
     return Scaffold(
-      backgroundColor: Colors.orange[400],
-      appBar: AppBar(
-        title: Text('ACA PNM'),
-        backgroundColor: Colors.orange[200],
-        actions: <Widget>[
-          FlatButton.icon(
-            icon: Icon(Icons.person), 
-            label: Text('Logout'),
-            onPressed: () async {
-              await _authInst.logOutClass();
-            },
-            )
+      body: ListView(
+        children: <Widget>[
+          image_slider,
         ],
       ),
     );

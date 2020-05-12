@@ -31,8 +31,8 @@ class _loginState extends State<login> {
         backgroundColor: Colors.blue[200],
         actions: <Widget>[
           FlatButton.icon(
-            icon: Icon(Icons.keyboard), 
-            label: Text('Sign In'),
+            icon: Icon(Icons.people), 
+            label: Text('Sign Up'),
             textColor: Colors.white,
             onPressed: () => widget.toggle(),
             )
@@ -83,7 +83,7 @@ class _loginState extends State<login> {
                 //validator: (val_userEmail) => val_userEmail.isEmpty ? 'Enter your Email address' : null,
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.purple),
+                    borderSide: BorderSide(color: Colors.black),
                   ),
                   border: OutlineInputBorder(),
                     labelText: 'Enter Email Here',
@@ -108,7 +108,7 @@ class _loginState extends State<login> {
               child: TextField(
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.purple),
+                    borderSide: BorderSide(color: Colors.black),
                   ),
                   border: OutlineInputBorder(),
                     labelText: 'Enter Password Here',
